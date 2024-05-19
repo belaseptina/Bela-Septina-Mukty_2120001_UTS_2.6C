@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Penjumlahan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Penjumlahan</h1>
+        <div class="calculator">
+            <input type="number" id="number1" placeholder="Masukkan bilangan pertama">
+            <input type="number" id="number2" placeholder="Masukkan bilangan kedua">
+            <button onclick="calculateSum()">Hitung</button>
+            <p id="result">Hasil: </p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Bela Septina Mukty
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    background-color: #9b4f4f;
+}
+
+.container {
+    background-color: #b38282;
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 1px solid #ffffff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #612626;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.calculator button {
+    padding: 10px 20px;
+    background-color: #9b4f4f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.calculator button:hover {
+    background-color: #772d2d;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+    color: #ffffff;
+    background-color: #bd7a7a;
+    border-top: 1px solid #ffffff;
+}
+</style>
+
+<script>
+function calculateSum() {
+    // Ambil nilai dari input
+    const number1 = document.getElementById('number1').value;
+    const number2 = document.getElementById('number2').value;
+
+    // Konversi nilai input menjadi integer
+    const num1 = parseInt(number1);
+    const num2 = parseInt(number2);
+
+    // Hitung penjumlahan
+    const sum = num1 + num2;
+
+    // Tampilkan hasil
+    document.getElementById('result').textContent = 'Hasil: ' + sum;
+}
+</script>
+
+</html>
